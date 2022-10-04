@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">News App</string>
+    <string name="not_available_image">Not available Image</string>
+    <string name="api_key">4351984051a1439aba457cb68ccf547b</string>
+</resources>

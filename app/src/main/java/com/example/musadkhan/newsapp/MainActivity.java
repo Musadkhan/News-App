@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.Bundle;
 
 import com.example.musadkhan.newsapp.Models.NewsApiResponse;
@@ -12,7 +13,7 @@ import com.example.musadkhan.newsapp.Models.NewsHeadlines;
 
 import java.util.List;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements SelectListener {
 
     RecyclerView recyclerView;
     CustomAdapter adapter;
@@ -48,7 +49,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recyclerViewMain);
         recyclerView.setHasFixedSize(true);
         recyclerView.setLayoutManager(new GridLayoutManager(this,1));
-        adapter = new CustomAdapter(this,list);
+        adapter = new CustomAdapter(this,list,this);
         recyclerView.setAdapter(adapter);
+    }
+
+    @Override
+    public void onNewsCLicked(NewsHeadlines newsHeadlines) {
+        startActivity(new Intent(MainActivity.this,DetailsActivity.class)
+                .putExtra("data",newsHeadlines));
     }
 }

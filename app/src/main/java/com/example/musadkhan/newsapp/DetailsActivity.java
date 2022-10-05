@@ -31,6 +31,9 @@ public class DetailsActivity extends AppCompatActivity {
         autherTxt.setText(newsHeadlines.getAuthor());
         timeTxt.setText(newsHeadlines.getPublishedAt());
         detailTxt.setText(newsHeadlines.getDescription());
-        Picasso.get().load(newsHeadlines.getUrlToImage()).into(newsImg);
+
+        if (newsHeadlines.getUrlToImage()!= null) {
+            Picasso.get().load(newsHeadlines.getUrlToImage()).into(newsImg);
+        }
     }
 }

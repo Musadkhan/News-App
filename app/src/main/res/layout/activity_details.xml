@@ -40,7 +40,7 @@
                         android:layout_width="match_parent"
                         android:src="@drawable/not_available"
                         android:layout_height="300dp"
-                        android:layout_marginTop="10dp"
+                        android:layout_marginTop="20dp"
                         android:scaleType="fitXY"/>
 
                     <TextView
@@ -71,6 +71,14 @@
                 android:textSize="18dp"
                 android:layout_margin="10dp"
                 android:textColor="@color/black"/>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Read Full Article"
+                android:layout_margin="15dp"
+                android:padding="10dp"
+                android:textSize="18sp"/>
 
         </LinearLayout>
     </ScrollView>

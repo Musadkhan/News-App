@@ -52,6 +52,7 @@ public class MainActivity extends AppCompatActivity implements SelectListener, V
         b1 = findViewById(R.id.btn_1);
         b1.setOnClickListener(this);
 
+
         b2 = findViewById(R.id.btn_2);
         b2.setOnClickListener(this);
 

@@ -10,13 +10,25 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:layout_margin="8dp"
         android:weightSum="3">
 
+        <ImageView
+            android:id="@+id/newsImage"
+            android:contentDescription="@string/not_available_image"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/not_available"
+            android:layout_margin="5dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true"
+            android:layout_weight="1"/>
+
         <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
             android:orientation="vertical"
             android:layout_weight="2">
 
@@ -27,7 +39,7 @@
                 android:textStyle="bold"
                 android:textColor="@color/black"
                 android:textSize="20sp"
-                android:maxLines="3"/>
+                android:maxLines="2"/>
 
 
             <TextView
@@ -35,22 +47,14 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
-                android:layout_marginTop="8dp"
+                android:layout_marginTop="5dp"
                 android:textColor="@color/purple_500"
                 android:textSize="18sp"
+                android:layout_marginBottom="5dp"
                 android:maxLines="1"/>
         </LinearLayout>
 
-       <ImageView
-           android:id="@+id/newsImage"
-           android:contentDescription="@string/not_available_image"
-           android:layout_width="0dp"
-           android:layout_height="match_parent"
-           android:src="@drawable/not_available"
-           android:layout_marginStart="5dp"
-           android:scaleType="fitCenter"
-           android:adjustViewBounds="true"
-           android:layout_weight="1"/>
+
 
     </LinearLayout>
 
